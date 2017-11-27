@@ -6,6 +6,7 @@
   "author": "Francisco Diaz <franciscojavier.diaz@i3television.es>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
