@@ -2,9 +2,12 @@
   "name": "ssr",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev:build:server": "webpack --config webpack.server.js"
+  },
   "repository": "https://github.com/frandm182/SSR-React.git",
   "author": "Francisco Diaz <franciscojavier.diaz@i3television.es>",
-  "license": "MIT",
+  "license": "MIT",  
   "dependencies": {
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",

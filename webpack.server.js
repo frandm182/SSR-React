@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build')
   },
-  // Informamos a webpack que babel corra babel en cada fichero
+  // Informamos a webpack que babel corra en cada fichero
   module: {
     rules: [
       {
