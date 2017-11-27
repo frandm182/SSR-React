@@ -1,0 +1,8 @@
+{
+  "name": "SSR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/frandm182/SSR-React.git",
+  "author": "Francisco Diaz <franciscojavier.diaz@i3television.es>",
+  "license": "MIT"
+}
