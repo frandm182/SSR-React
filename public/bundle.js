@@ -112,7 +112,7 @@ module.exports = emptyFunction;
 "use strict";
 
 
-if (undefined === 'production') {
+if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(14);
 } else {
   module.exports = __webpack_require__(15);
@@ -231,7 +231,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 var emptyObject = {};
 
-if (undefined !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   Object.freeze(emptyObject);
 }
 
@@ -265,7 +265,7 @@ module.exports = emptyObject;
 
 var validateFormat = function validateFormat(format) {};
 
-if (undefined !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   validateFormat = function validateFormat(format) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -322,7 +322,7 @@ var emptyFunction = __webpack_require__(0);
 
 var warning = emptyFunction;
 
-if (undefined !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   var printWarning = function printWarning(format) {
     for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
@@ -380,7 +380,7 @@ module.exports = warning;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-if (undefined !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(4);
   var warning = __webpack_require__(5);
   var ReactPropTypesSecret = __webpack_require__(16);
@@ -399,7 +399,7 @@ if (undefined !== 'production') {
  * @private
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (undefined !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     for (var typeSpecName in typeSpecs) {
       if (typeSpecs.hasOwnProperty(typeSpecName)) {
         var error;
@@ -536,7 +536,7 @@ var EventListener = {
         }
       };
     } else {
-      if (undefined !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         console.error('Attempted to listen to events during the capture phase on a ' + 'browser that does not support the capture phase. Your application ' + 'will not receive some events.');
       }
       return {
@@ -903,7 +903,7 @@ var R = { Children: { map: function map(a, b, e) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-if (undefined !== "production") {
+if (process.env.NODE_ENV !== "production") {
   (function () {
     'use strict';
 
@@ -2261,7 +2261,7 @@ function checkDCE() {
   if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') {
     return;
   }
-  if (undefined !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     // This branch is unreachable because this function is only called
     // in production, but the condition is true only in development.
     // Therefore if the branch is still here, dead code elimination wasn't
@@ -2281,7 +2281,7 @@ function checkDCE() {
   }
 }
 
-if (undefined === 'production') {
+if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
@@ -4366,7 +4366,7 @@ module.exports = isNode;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(undefined!=="production"){(function(){'use strict';var React=__webpack_require__(1);var invariant=__webpack_require__(4);var warning=__webpack_require__(5);var ExecutionEnvironment=__webpack_require__(7);var _assign=__webpack_require__(2);var emptyFunction$1=__webpack_require__(0);var EventListener=__webpack_require__(8);var getActiveElement=__webpack_require__(9);var shallowEqual=__webpack_require__(10);var containsNode=__webpack_require__(11);var focusNode=__webpack_require__(12);var emptyObject=__webpack_require__(3);var checkPropTypes=__webpack_require__(6);var hyphenateStyleName=__webpack_require__(22);var camelizeStyleName=__webpack_require__(24);/**
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var React=__webpack_require__(1);var invariant=__webpack_require__(4);var warning=__webpack_require__(5);var ExecutionEnvironment=__webpack_require__(7);var _assign=__webpack_require__(2);var emptyFunction$1=__webpack_require__(0);var EventListener=__webpack_require__(8);var getActiveElement=__webpack_require__(9);var shallowEqual=__webpack_require__(10);var containsNode=__webpack_require__(11);var focusNode=__webpack_require__(12);var emptyObject=__webpack_require__(3);var checkPropTypes=__webpack_require__(6);var hyphenateStyleName=__webpack_require__(22);var camelizeStyleName=__webpack_require__(24);/**
  * WARNING: DO NOT manually require this module.
  * This is a replacement for `invariant(...)` used by the error code system
  * and will _only_ be required by the corresponding babel pass.
