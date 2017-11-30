@@ -1,4 +1,5 @@
 src/**/*.css
 src/**/*.md
 build/**/*.*
+public/**/*.*
 scripts/**/*.*
